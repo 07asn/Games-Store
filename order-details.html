@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/order-details.css">
+    <title>Order Summary</title>
+</head>
+
+<body>
+    <nav id="navbar-placeholder"></nav>
+    <nav id="header-placeholder"></nav>
+    <div class="container mt-4">
+
+
+        <!-- -- -- Path -- -- -->
+        <div class="breadcrumb">
+            <i class="bi bi-house-door-fill home-icon"></i>
+            <span>Home > Purchase Orders > Order Summary</span>
+        </div>
+        <!-- -- -- Path -- -- -->
+    
+    
+        <!-- - Order Status - -->
+        <div class="section-container">
+            <div class="order-status d-flex align-items-center">
+                <div class="status-icon">
+                    <img src="img/checkmark.png" alt="Order Completed" class="img-fluid">
+                </div>
+                <div class="status-details">
+                    <p class="status-message">Thank you for shopping through our store 😊</p>
+                    <p><strong>Order:</strong> Z5383263862</p>
+                    <p><strong>Purchase Date:</strong> Dec 30/24 - 7:35 PM</p>
+                    <p><strong>Order Status:</strong> <span class="status-completed">Completed</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- - Order Status - -->
+    
+    
+        <!-- - -- Rating -- -- -->
+        <div class="section-container">
+            <div class="rating-section">
+                <h2>Rate Your Experience</h2>
+                <p>
+                    Rating the order from the store service, products, and shipping companies helps us improve our
+                    services and provide them better.
+                </p>
+                <button class="rate-now-btn btn btn-warning activation-guide-btn" data-bs-toggle="modal"
+                    data-bs-target="#ratingModal">Rate Now</button>
+            </div>
+        </div>
+        <!-- - -- Rating -- -- -->
+    
+    
+        <!-- - Rating Pop up - -->
+        <div class="modal fade" id="ratingModal" tabindex="-1" aria-labelledby="ratingModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ratingModalLabel">Rate Your Experience</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="rating-stars mb-3">
+                            <span class="star" data-value="1">☆</span>
+                            <span class="star" data-value="2">☆</span>
+                            <span class="star" data-value="3">☆</span>
+                            <span class="star" data-value="4">☆</span>
+                            <span class="star" data-value="5">☆</span>
+                        </div>
+                        <p><strong>How was your experience? 😊 </strong></p>
+
+                        <!-- Comment -->
+                        <textarea id="feedback-comments" rows="4" placeholder="Leave a comment..."
+                            class="form-control mb-3"></textarea>
+                        <!-- Comment -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="submitRatingBtn">Submit Rating</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- - Rating Pop up - -->
+
+        <!-- Products Deleviry -->
+        <div class="section-container">
+            <div class="products">
+                <h2 class="section-title">Products</h2>
+
+                <!-- Product 1 -->
+                <div class="product card mb-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-2 text-center">
+                            <img src="img/product-2.png.jpg" class="img-fluid rounded img-enhanced"
+                                alt="Call of Duty: Black Ops 6">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title">Elden Ring + DLC</h5>
+                                <p class="price">4.99 JOD</p>
+                                <p><strong>Amount:</strong> 1</p>
+                                <p><strong>Total:</strong> 41.51 JOD</p>
+                                
+                                <!-- Product Details -->
+                                <div class="accordion" id="accordionProduct1">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingProduct1">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseProduct1"
+                                                aria-expanded="false" aria-controls="collapseProduct1">
+                                                Show Key Details
+                                            </button>
+                                        </h2>
+                                        <div id="collapseProduct1" class="accordion-collapse collapse"
+                                            aria-labelledby="headingProduct1" data-bs-parent="#accordionProduct1">
+                                            <div class="accordion-body">
+                                                <p><strong>Code 1:</strong> <span
+                                                        id="keyProduct1">N832K-FVKRP-TGQ8F-7TPTQ-T6PKG</span></p>
+                                                <p><strong>Code 2:</strong> <span
+                                                        id="keyProduct2">XYZ12-ABC34-56789-T6PKG</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product Details -->
+                                
+                                <!-- Product Buttons -->
+                                <div class="action-buttons mt-3">
+                                    <button class="btn btn-primary copy-btn" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Copy Keys"
+                                        onclick="copyKey([document.getElementById('keyProduct1').innerText, document.getElementById('keyProduct2').innerText])">Copy</button>
+                                    <a href="#" class="btn btn-warning activation-guide-btn">Activation Guide</a>
+                                </div>
+                                <!-- Product Buttons -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 1 -->
+
+                <!-- Product 2 -->
+                <div class="product card mb-3">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-2 text-center">
+                            <img src="img/product-5.jpg" class="img-fluid rounded img-enhanced"
+                                alt="Super Mario Odyssey">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title">Super Mario Odyssey</h5>
+                                <p class="price">2.99 JOD</p>
+                                <p><strong>Amount:</strong> 2</p>
+                                <p><strong>Total:</strong> 5.98 JOD</p>
+
+                                <!-- Product Details -->
+                                <div class="accordion" id="accordionProduct2">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingProduct2">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseProduct2"
+                                                aria-expanded="false" aria-controls="collapseProduct2">
+                                                Show Key Details
+                                            </button>
+                                        </h2>
+                                        <div id="collapseProduct2" class="accordion-collapse collapse"
+                                            aria-labelledby="headingProduct2" data-bs-parent="#accordionProduct2">
+                                            <div class="accordion-body">
+                                                <p><strong>Code:</strong> <span
+                                                        id="keyProduct3">QWER-56789-ABC12-RTYUK</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Product Details -->
+
+                                <!-- Product Buttons -->
+                                <div class="action-buttons mt-3">
+                                    <button class="btn btn-primary copy-btn" data-bs-toggle="tooltip"
+                                        data-bs-placement="top" title="Copy Key"
+                                        onclick="copyKey([document.getElementById('keyProduct3').innerText])">Copy</button>
+                                    <a href="#" class="btn btn-warning activation-guide-btn">Activation Guide</a>
+                                </div>
+                                <!-- Product Buttons -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+            </div>
+        </div>
+        <!-- Products Deleviry -->
+    </div>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="js/order-details.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"defer></script>
+    <script src="js/header.js"></script>
+
+</body>
+</html>

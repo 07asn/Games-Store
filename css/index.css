@@ -1,0 +1,1215 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    margin-top: 60px;
+}
+
+#header-placeholder {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar-placeholder {
+    z-index: 1001;
+}
+
+.CartBtn {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    z-index: 1;
+}
+
+.IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(17, 17, 17);
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.04em;
+    font-weight: 600;
+}
+
+.CartBtn:hover .IconContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    transition-duration: .5s;
+}
+
+.CartBtn:hover .text {
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.CartBtn:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+/* ------------------ Header ------------------ */
+.header {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    text-align: center;
+    color: #fff;
+    font-family: cursive;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 10vh;
+    background: linear-gradient(270deg, #eaff00, #00ff1e, #ff75f3, #00ffff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textColorChange 5s ease-in-out infinite;
+}
+
+.header h1 {
+    font-size: 9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.9rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.header-button {
+    width: 17rem;
+    height: 5.5rem;
+    padding: 0;
+    border: none;
+    transform: rotate(5deg);
+    transform-origin: center;
+    font-family: "Gochi Hand", cursive;
+    text-decoration: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    box-shadow: 0 2px 0 #494a4b;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.header-button span {
+    background: #FFDF00;
+    display: block;
+    padding: 1.0rem 1.5rem;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+}
+
+.header-button:active {
+    transform: translateY(5px);
+    padding-bottom: 0px;
+    outline: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 15vh;
+    }
+
+    .header h1 {
+        font-size: 5rem;
+        letter-spacing: 1px;
+    }
+
+    .header p {
+        font-size: 1.3rem;
+    }
+
+    .header-button {
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .header-button span {
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+    }
+
+    .header-button {
+        width: 10rem;
+        height: 3.5rem;
+        font-size: 1.2rem;
+    }
+
+    .header-button span {
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* ------------------ Header ------------------ */
+
+
+
+/* --------------- Quick Search --------------- */
+.quick-search-section {
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.quick-search-heading {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.quick-search-heading::after {
+    content: "";
+    display: block;
+    width: 9rem;
+    height: 4px;
+    background-color: #DFBF00;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+
+}
+
+.radio input {
+    display: none;
+}
+
+.radio .name {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #fff;
+    color: #555;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 3.5rem;
+}
+
+.radio .name:hover {
+    background-color: #FFDF00;
+    border: 0.5rem solid;
+    border-color: #FFDF00;
+    color: #000000;
+}
+
+/* --------------- Quick Search --------------- */
+
+
+/* --------------- Categories --------------- */
+.categories {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+/* Card Styling */
+.category-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    transform: scale(0.98);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-radius 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+}
+
+/* Image Styling with Hover Effects */
+.category-img-wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    border-radius: 20px;
+}
+
+.category-card:hover img {
+    transform: scale(1.15);
+}
+
+/* Hover Overlay Effect */
+.category-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.category-card:hover .category-img-wrapper::after {
+    opacity: 0.3;
+}
+
+/* Card Body and Text Styling */
+.category-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.category-card:hover .card-title {
+    color: #C70039;
+    transform: translateY(-5px);
+}
+
+/* Button Styling */
+.category-card .btn-primary {
+    background-color: #FFDF00;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.category-card .btn-primary:hover {
+    background-color: #C70039;
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .categories h2 {
+        font-size: 2.5rem;
+    }
+
+    .category-card {
+        border-radius: 15px;
+    }
+
+    .category-card .btn-primary {
+        padding: 10px 20px;
+    }
+
+    .category-card .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* --------------- Categories --------------- */
+
+
+/* ----------------- Offers ----------------- */
+.daily-offers {
+    background-color: #f9f9f9;
+}
+
+#countdownTimer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFDF00;
+}
+
+.timer-box {
+    font-size: 2rem;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.timer-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.timer-box p {
+    font-size: 1rem;
+    color: black;
+    margin-top: 5px;
+}
+
+
+.timer-box:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timer-box:active {
+    transform: scale(1.1);
+}
+
+.offers-card {
+    width: 420px;
+    height: 480px;
+    background: linear-gradient(145deg, #ffffff, #ffffff);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offers-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.offers-card h2 {
+    z-index: 2;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sale-mark {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(90deg, #FF0000, #FF4500);
+    color: white;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 3;
+    box-shadow: 0 5px 10px rgba(255, 0, 0, 0.4);
+}
+
+.offers-img {
+    width: 95%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: block;
+    border: 3px solid #FFDF00;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offers-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 223, 0, 0.5);
+}
+
+.offers-price {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.2em;
+    z-index: 2;
+}
+
+.offers-old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 10px;
+}
+
+.offers-new-price {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.add-to-cart {
+    background: linear-gradient(90deg, #FFDF00, #FFD700);
+    color: #000000;
+    border: none;
+    padding: 14px 20px;
+    width: 90%;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    z-index: 4;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 223, 0, 0.4);
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(90deg, #FFD700, #FFC700);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 223, 0, 0.6);
+}
+
+.offers-card::before {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 140%;
+    background-image: linear-gradient(180deg, rgb(255, 0, 0), rgb(251, 255, 0));
+    animation: rotBGimg 8s linear infinite;
+    top: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.offers-card::after {
+    content: '';
+    position: absolute;
+    background: white;
+    inset: 10px;
+    z-index: 0;
+}
+
+.offer-card .card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.offer-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #DFBF00, #FFDF00);
+    padding: 12px 2.5rem;
+    outline: 3px solid #282936;
+    outline-offset: 3px;
+    border: none;
+    color: #282936;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    /* Removes the underline */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-btn:hover {
+    outline-offset: 6px;
+    background: linear-gradient(90deg, #FF9F00, #FEBF00);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    color: #282936;
+}
+
+.offer-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: inherit;
+    transform: scale(0);
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+
+    /* Make timer box responsive */
+    .timer-box {
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+
+    .offers-card {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .offers-card h2 {
+        font-size: 1.4em;
+    }
+
+    .offers-img {
+        height: 200px;
+    }
+
+    .offers-price {
+        font-size: 1.1em;
+    }
+
+    .add-to-cart {
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+
+    .sale-mark {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-box {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .offers-card {
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .offers-card h2 {
+        font-size: 1.2em;
+    }
+
+    .offers-img {
+        height: 180px;
+    }
+
+    .offers-price {
+        font-size: 1em;
+    }
+
+    .add-to-cart {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .sale-mark {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+
+/* ----------------- Offers ----------------- */
+
+
+/* ----------------- How It Works ----------------- */
+.steps-section {
+
+    background-color: #1a1a1a;
+}
+
+.step-item {
+    position: relative;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.step-icon span {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.step-item::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    width: 30px;
+    height: 2px;
+    background-color: #dee2e6;
+    transform: translateY(-50%);
+}
+
+.step-item:last-child::after {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .step-item::after {
+        display: none;
+    }
+}
+
+/* ----------------- How It Works ----------------- */
+
+
+/* ----------------- Library Games ----------------- */
+.layout-creation {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.layout-creation .animate {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.layout-creation .animate[data-animation="fadeUp"] {
+    opacity: 1;
+}
+
+.layout-creation .form-row {
+    margin-bottom: 20px;
+}
+
+.layout-creation .img-square {
+    position: relative;
+    padding-bottom: 100%;
+    margin-bottom: 15px;
+}
+
+.layout-creation .img-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.img-square {
+    position: relative;
+    height: 200px;
+    /* Adjust this based on the desired image height */
+    overflow: hidden;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    /* Optional for better visibility */
+    text-align: center;
+    background: linear-gradient(270deg, #eaff00, #00ff1e, #ff75f3, #00ffff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textColorChange 5s ease-in-out infinite;
+
+}
+
+@keyframes textColorChange {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.img-square:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.img-square:hover .img-cover {
+    transform: scale(1.05);
+}
+
+/* ----------------- Library Games ----------------- */
+
+
+/* -------------------- Why Us --------------------- */
+.why-us {
+    background-color: #1a1a1a;
+    padding: 80px 0;
+}
+
+.card {
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.card-body .display-4 {
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-body .display-4 {
+    transform: scale(1.1);
+}
+
+/* -------------------- Why Us --------------------- */
+
+
+/* ----------------- Reviews ---------------- */
+.testimonial-card {
+    background: #DFBF00;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: #000000;
+    opacity: 0.2;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #000000;
+    height: 6px;
+    width: 10px;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 10px;
+        /* Reduce padding for mobile */
+        border-radius: 15px;
+        /* Make the card edges slightly rounder */
+    }
+
+    .quote-icon {
+        font-size: 2.5rem;
+        /* Reduce icon size on mobile */
+    }
+
+    .avatar {
+        width: 60px;
+        /* Smaller avatar on mobile */
+        height: 60px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 35px;
+        /* Slightly smaller carousel controls */
+        height: 35px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel-indicators {
+        bottom: -30px;
+        /* Move indicators up */
+    }
+
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        padding: 8px;
+        /* Even smaller padding on smaller screens */
+        margin-top: 1rem;
+    }
+
+    .quote-icon {
+        font-size: 2rem;
+        /* Further reduce icon size */
+    }
+
+    .avatar {
+        width: 50px;
+        /* Even smaller avatar */
+        height: 50px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 30px;
+        /* Even smaller carousel controls */
+        height: 30px;
+        margin: 1rem;
+    }
+}
+
+/* ----------------- Reviews ---------------- */
+
+
+/* ----------------- Whatsapp ---------------- */
+.hidden {
+    display: none;
+}
+
+.sticky-button {
+    position: fixed;
+    background-color: #25d366;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.sticky-button svg {
+    margin: auto;
+    fill: #fff;
+    width: 35px;
+    height: 35px;
+}
+
+.sticky-button a,
+.sticky-button label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.sticky-button label svg.close-icon {
+    display: none;
+}
+
+.sticky-chat {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 320px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    z-index: 21;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sticky-chat a {
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: #505050;
+}
+
+.sticky-chat svg {
+    width: 35px;
+    height: 35px;
+}
+
+.sticky-chat .chat-content {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.sticky-chat .chat-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #25d366;
+    overflow: hidden;
+}
+
+.sticky-chat .chat-header:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 75px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 70px 0 5px 0;
+}
+
+.sticky-chat .chat-header svg {
+    width: 35px;
+    height: 35px;
+    flex: 0 0 auto;
+    fill: #fff;
+}
+
+.sticky-chat .chat-header .title {
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+
+.sticky-chat .chat-header .title span {
+    font-size: 11px;
+    font-weight: 400;
+    display: block;
+    line-height: 1.58em;
+    margin: 0;
+    color: #f4f4f4;
+}
+
+.sticky-chat .chat-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 20px;
+    font-size: 12px;
+}
+
+.sticky-chat .chat-text span {
+    display: inline-block;
+    margin-right: auto;
+    padding: 10px;
+    background-color: #f0f5fb;
+    border-radius: 0px 15px 15px;
+}
+
+.sticky-chat .chat-text span:after {
+    content: "just now";
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 9px;
+    color: #989b9f;
+}
+
+.sticky-chat .chat-text span.typing {
+    margin: 15px 0 0 auto;
+    padding: 10px;
+    border-radius: 15px 0px 15px 15px;
+}
+
+.sticky-chat .chat-text span.typing:after {
+    display: none;
+}
+
+.sticky-chat .chat-text span.typing svg {
+    height: 13px;
+    fill: #505050;
+}
+
+.sticky-chat .chat-button {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.sticky-chat .chat-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #505050;
+    margin-left: auto;
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+}
+
+.chat-menu:checked+.sticky-button label {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.chat-menu:checked+.sticky-button label svg.chat-icon {
+    display: none;
+}
+
+.chat-menu:checked+.sticky-button label svg.close-icon {
+    display: table-cell;
+}
+
+.chat-menu:checked+.sticky-button+.sticky-chat {
+    bottom: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ----------------- Whatsapp ---------------- */

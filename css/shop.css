@@ -1,0 +1,124 @@
+section {
+    margin-top: 20px;
+}
+#header-placeholder {
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8rem;
+}
+#navbar-placeholder{
+    z-index: 1001;
+}
+/* -------------------------------- Product Card -------------------------------- */
+.product-card {
+    border: 1px solid var(--bs-gray-300);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+        /* ---------------- Card Img ---------------- */
+.product-card-image {
+    position: relative;
+    border-bottom: 1px solid var(--bs-gray-300);
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-media img {
+    transition: transform 0.4s ease, brightness 0.4s ease;
+    transform: scale(1);
+    filter: brightness(100%);
+}
+
+.product-media img:hover {
+    transform: scale(1.08);
+    filter: brightness(110%);
+}
+        /* ---------------- Card Sale ---------------- */
+
+.product-card .badge-ribbon {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+        /* ------------- Favorite Button ------------- */
+.btn-favorite {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.btn-favorite:hover {
+    background-color: rgba(255, 107, 107, 0.3);
+    color: red;
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+        /* ---------------- Card Body ---------------- */
+.product-card-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+}
+                /* ------ Title ------ */
+
+.product-title a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+.product-title a:hover {
+    color: #DFBF00;
+    text-decoration: underline;
+}
+                /* ------ Price ------ */
+.product-price .text-primary{
+    margin-top: 10px;
+    line-height: normal;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 87, 87) !important;
+}
+
+.product-price del {
+    font-size: 16px;
+    color: #888;
+}
+
+                /* - Add to Cart button - */
+.btn-add-to-cart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e5e5e5;    
+    color: #1a1a1a;
+    width: 90%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #DFBF00;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+

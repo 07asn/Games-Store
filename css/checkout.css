@@ -1,0 +1,183 @@
+.main-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 60px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header p {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.coupon {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.coupon input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.coupon input:focus {
+    border-color: #007bff;
+}
+
+.coupon button {
+    padding: 12px 20px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.coupon button:hover {
+    background: #DFBF00;
+}
+
+.order-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.payment-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 100px);
+    padding: 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-method:hover {
+    border-color: #007bff;
+    background: #f9f9ff;
+}
+
+.payment-method img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.payment-method span {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.payment-method input {
+    display: none;
+}
+
+.payment-method input:checked+span {
+    color: #FFDF00;
+}
+
+.payment-fields {
+    display: none;
+    margin-top: 15px;
+}
+
+.payment-fields.active {
+    display: block;
+}
+
+.payment-fields input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.payment-fields input:focus {
+    border-color: #DFBF00;
+}
+
+.payment-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #6c757d;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.payment-button:hover {
+    background: #DFBF00;
+}
+
+.trustwave img {
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .payment-methods {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .payment-method {
+        width: 100%;
+    }
+}
+
+.content-section a {
+    text-decoration: none;
+}

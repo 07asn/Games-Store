@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@2.x.x/dist/alpine.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        nav {
+            background-color: #FFDF00;
+            color: #514F4F;
+            position: relative;
+        }
+
+        nav a,
+        nav button {
+            color: #514F4F;
+        }
+
+        .logo {
+            font-family: cursive;
+            font-size: large;
+        }
+
+        .cart-dropdown {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 15px;
+            display: none;
+            z-index: 50;
+        }
+
+        .cart-dropdown.show {
+            display: block;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            max-height: 50px;
+        }
+
+        .mobile-search-bar {
+            @apply absolute top-16 left-0 w-full bg-white p-4 shadow-lg;
+            z-index: 40;
+        }
+
+        .cart-badge {
+            @apply absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs;
+        }
+
+        .mobile-menu {
+            @apply absolute top-16 left-0 w-full bg-[#F9ECE6] z-50 shadow-lg;
+        }
+
+        .profile-dropdown {
+            @apply absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 z-50;
+        }
+
+        .profile-dropdown a {
+            @apply block px-4 py-2 hover:bg-gray-100;
+        }
+
+        .dropdown-item {
+            @apply flex items-center space-x-2;
+        }
+
+        .dropdown-item i {
+            @apply w-5 text-center;
+        }
+
+        .hover-effect {
+            @apply transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-md;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav x-data="{ 
+            open: false, 
+            cartOpen: false, 
+            searchOpen: false,
+            categoriesOpen: false,
+            profileOpen: false,
+            cart: {
+                items: [
+                    { name: 'Game Item 1', price: 7.99 },
+                    { name: 'Subscription', price: 7.00 }
+                ],
+                get total() {
+                    return this.items.reduce((sum, item) => sum + item.price, 0);
+                }
+            }
+        }" class="bg-[#F9ECE6] text-[#514F4F] shadow-lg w-full">
+
+            <div class="container mx-auto flex justify-between items-center h-16 px-4 md:px-8">
+
+                <!------------------ Logo ------------------>
+                <div class="logo flex items-center">
+                    <a href="index.html">
+                        <img src="img/Blue And Orange Simple Illustration Game Station Logo (1).png"
+                            alt="Game Station Logo">
+                    </a>
+                </div>
+
+
+                <!------------------ Desktop Search ------------------>
+                <div class="hidden lg:flex items-center w-1/2 lg:w-1/3">
+                    <div class="relative w-full">
+                        <input type="text" placeholder="Search..."
+                            class="rounded-full border border-gray-300 px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-gray-400">
+                    </div>
+                </div>
+
+                <!-- Categories Dropdown -->
+                <div x-data="{ categoriesOpen: false }" class="relative">
+                    <button @click="categoriesOpen = !categoriesOpen" @mouseenter="categoriesOpen = true"
+                        @mouseleave="categoriesOpen = false" @focus="categoriesOpen = true"
+                        @blur="categoriesOpen = false"
+                        class="flex items-center space-x-2 p-2 rounded-md hover:bg-yellow-400 focus:outline-none transition ease-in-out duration-200">
+                        <i class="fas fa-th-large text-gray-700"></i>
+                        <span class="text-gray-700">Categories</span>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div x-show="categoriesOpen" x-transition:enter="transition ease-out duration-300 transform"
+                        x-transition:enter-start="scale-95 opacity-0" x-transition:enter-end="scale-100 opacity-100"
+                        x-transition:leave="transition ease-in duration-200 transform"
+                        x-transition:leave-start="scale-100 opacity-100" x-transition:leave-end="scale-95 opacity-0"
+                        @mouseenter="categoriesOpen = true" @mouseleave="categoriesOpen = false"
+                        class="absolute left-0 mt-2 w-56 rounded-xl shadow-2xl bg-white border border-gray-100 z-50">
+                        <div class="py-2">
+                            <!-- Dropdown Items -->
+                            <a href="shop.html"
+                                class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                <i class="fas fa-gamepad text-lg text-gray-500"></i>
+                                <span>Games</span>
+                            </a>
+                            <a href="shop.html"
+                                class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                <i class="fas fa-user-circle text-lg text-gray-500"></i>
+                                <span>Accounts</span>
+                            </a>
+                            <a href="shop.html"
+                                class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                <i class="fas fa-code text-lg text-gray-500"></i>
+                                <span>Programs</span>
+                            </a>
+                            <a href="shop.html"
+                                class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                <i class="fas fa-credit-card text-lg text-gray-500"></i>
+                                <span>Digital Cards</span>
+                            </a>
+                            <a href="shop.html"
+                                class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                <i class="fas fa-sync-alt text-lg text-gray-500"></i>
+                                <span>Subscriptions</span>
+                            </a>
+                            <a href="shop.html"
+                                class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                <i class="fas fa-laptop-code text-lg text-gray-500"></i>
+                                <span>Programming</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!------------------ Desktop Navigation ------------------>
+                <a href="index.html" class="flex items-center space-x-2 hover-effect">
+                    <i class="fas fa-home text-gray-700"></i>
+                    <span class="text-gray-700">Home</span>
+                </a>
+
+
+                <!------------------ Cart ------------------>
+                <div @mouseenter="cartOpen = true" @mouseleave="cartOpen = false" class="relative">
+                    <!-- Cart Link -->
+                    <a href="cart.html"
+                        class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition ease-in-out duration-200">
+                        <i class="fas fa-shopping-cart text-gray-700 text-xl"></i>
+                        <span class="text-gray-700">Cart</span>
+                        <span x-show="cart.items.length"
+                            class="cart-badge bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                            <span x-text="cart.items.length"></span>
+                        </span>
+                    </a>
+                    <!-- Cart Dropdown -->
+                    <div x-show="cartOpen" x-transition:enter="transition ease-out duration-300 transform"
+                        x-transition:enter-start="scale-95 opacity-0" x-transition:enter-end="scale-100 opacity-100"
+                        x-transition:leave="transition ease-in duration-200 transform"
+                        x-transition:leave-start="scale-100 opacity-100" x-transition:leave-end="scale-95 opacity-0"
+                        @click.away="cartOpen = false"
+                        class="absolute right-0 mt-2 w-80 bg-white border border-gray-100 rounded-xl shadow-2xl z-50">
+                        <!-- Cart Header -->
+                        <h3 class="font-semibold text-lg p-4 border-b border-gray-100">Your Cart</h3>
+                        <!-- Cart Items -->
+                        <ul class="p-4 space-y-3 max-h-64 overflow-y-auto">
+                            <template x-for="item in cart.items">
+                                <li class="flex justify-between items-center">
+                                    <span x-text="item.name" class="text-gray-700"></span>
+                                    <span class="text-gray-700 font-medium">JD <span
+                                            x-text="item.price.toFixed(2)"></span></span>
+                                </li>
+                            </template>
+                        </ul>
+                        <!-- Cart Total -->
+                        <div class="p-4 border-t border-gray-100">
+                            <div class="flex justify-between font-semibold text-gray-700">
+                                <span>Total:</span>
+                                <span>JD <span x-text="cart.total.toFixed(2)"></span></span>
+                            </div>
+                        </div>
+                        <!-- Checkout Button -->
+                        <div class="p-4">
+                            <a href="checkout.html"
+                                class="w-full bg-yellow-600 text-white py-2 px-4 rounded-lg flex items-center justify-center hover:bg-blue-700 transition ease-in-out duration-200">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                <span>Checkout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!------------------ Profile ------------------>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <!-- Profile Dropdown -->
+                    <div x-data="{ profileOpen: false }" class="relative">
+                        <!-- Profile Button -->
+                        <button @click="profileOpen = !profileOpen" @keydown.enter="profileOpen = !profileOpen"
+                            class="p-2 rounded-full  hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-200"
+                            aria-label="Toggle profile dropdown">
+                            <i class="fas fa-user-circle text-2xl text-gray-700"></i>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div x-show="profileOpen" x-transition:enter="transition ease-out duration-300 transform"
+                            x-transition:enter-start="scale-95 opacity-0" x-transition:enter-end="scale-100 opacity-100"
+                            x-transition:leave="transition ease-in duration-200 transform"
+                            x-transition:leave-start="scale-100 opacity-100" x-transition:leave-end="scale-95 opacity-0"
+                            @click.away="profileOpen = false"
+                            class="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-xl z-50">
+                            <!-- Dropdown Items -->
+                            <a href="login.html"
+                                class="dropdown-item flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition ease-in-out duration-150">
+                                <i class="fas fa-sign-in-alt mr-3 text-gray-500"></i>
+                                <span>Sign In</span>
+                            </a>
+                            <a href="account-settings.html"
+                                class="dropdown-item flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition ease-in-out duration-150">
+                                <i class="fas fa-cog mr-3 text-gray-500"></i>
+                                <span>Account Settings</span>
+                            </a>
+                            <a href="orders.html"
+                                class="dropdown-item flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition ease-in-out duration-150">
+                                <i class="fas fa-box mr-3 text-gray-500"></i>
+                                <span>Orders</span>
+                            </a>
+                            <a href="wishlist.html"
+                                class="dropdown-item flex items-center px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition ease-in-out duration-150">
+                                <i class="fas fa-heart mr-3 text-gray-500"></i>
+                                <span>Wishlist</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+                <!------------------ Mobile ------------------>
+                <div class="flex lg:hidden items-center space-x-6">
+                    <!-- Search Icon -->
+                    <button @click="searchOpen = !searchOpen" aria-label="Toggle Search Bar"
+                        class="p-2 rounded-full hover:bg-yellow-400 focus:ring-2 focus:ring-yellow-500 transition ease-in-out duration-200">
+                        <i class="fas fa-search text-xl text-gray-700"></i>
+                    </button>
+
+                    <!-- Hamburger Menu -->
+                    <button @click="open = !open" aria-label="Toggle Sidebar Menu"
+                        class="p-2 rounded-full hover:bg-yellow-400 focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-200">
+                        <div class="w-6 h-6 flex flex-col justify-between items-center">
+                            <span class="block h-0.5 w-full bg-gray-700 transform transition duration-200"
+                                :class="open ? 'rotate-45 translate-y-2.5' : ''"></span>
+                            <span class="block h-0.5 w-full bg-gray-700 transition duration-200"
+                                :class="open ? 'opacity-0' : ''"></span>
+                            <span class="block h-0.5 w-full bg-gray-700 transform transition duration-200"
+                                :class="open ? '-rotate-45 -translate-y-2.5' : ''"></span>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Mobile Search Bar -->
+                <div x-show="searchOpen" @click.away="searchOpen = false"
+                    x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 translate-y-2"
+                    x-transition:enter-end="opacity-100 translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 translate-y-0"
+                    x-transition:leave-end="opacity-0 translate-y-2"
+                    class="lg:hidden fixed top-16 left-0 w-full bg-white p-4 shadow-lg z-40">
+                    <input type="text" placeholder="Search..."
+                        class="w-full rounded-full border border-gray-300 px-5 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Mobile Sidebar Menu -->
+                <div x-show="open" @click.away="open = false" x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0"
+                    x-transition:leave="transition ease-in duration-200" x-transition:leave-start="translate-x-0"
+                    x-transition:leave-end="-translate-x-full" class="lg:hidden fixed inset-0 z-50">
+                    <!-- Overlay -->
+                    <div x-show="open" @click="open = false" class="fixed inset-0 bg-black/50"></div>
+
+                    <!-- Sidebar -->
+                    <aside
+                        class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-50 overflow-y-auto rounded-tr-lg rounded-br-lg"
+                        role="menu" aria-expanded="true">
+                        <!-- Close Button -->
+                        <button @click="open = false"
+                            class="absolute top-4 right-4 p-2 text-gray-700 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 rounded-full transition ease-in-out duration-200"
+                            aria-label="Close Sidebar Menu">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+
+                        <!-- Sidebar Content -->
+                        <div class="py-5">
+                            <div class="flex flex-col space-y-6">
+                                <!-- Home Link -->
+                                <a href="index.html"
+                                    class="px-6 py-3 text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-200"
+                                    role="menuitem">
+                                    Home
+                                </a>
+
+                                <!-- Categories -->
+                                <div class="border-t border-gray-100">
+                                    <button @click="categoriesOpen = !categoriesOpen"
+                                        class="px-6 py-3 w-full text-left flex justify-between items-center text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-200"
+                                        aria-expanded="false" aria-label="Toggle Categories">
+                                        <span>Categories</span>
+                                        <i :class="categoriesOpen ? 'fa-chevron-up' : 'fa-chevron-down'"
+                                            class="fas text-sm"></i>
+                                    </button>
+                                    <div x-show="categoriesOpen" x-transition:enter="transition ease-out duration-300"
+                                        x-transition:enter-start="opacity-0 translate-y-2"
+                                        x-transition:enter-end="opacity-100 translate-y-0" class="bg-gray-50"
+                                        role="menu">
+                                        <a href="shop.html"
+                                            class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                            <i class="fas fa-gamepad text-lg text-gray-500"></i>
+                                            <span>Games</span>
+                                        </a>
+                                        <a href="shop.html"
+                                            class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                            <i class="fas fa-user-circle text-lg text-gray-500"></i>
+                                            <span>Accounts</span>
+                                        </a>
+                                        <a href="shop.html"
+                                            class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                            <i class="fas fa-code text-lg text-gray-500"></i>
+                                            <span>Programs</span>
+                                        </a>
+                                        <a href="shop.html"
+                                            class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                            <i class="fas fa-credit-card text-lg text-gray-500"></i>
+                                            <span>Digital Cards</span>
+                                        </a>
+                                        <a href="shop.html"
+                                            class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                            <i class="fas fa-sync-alt text-lg text-gray-500"></i>
+                                            <span>Subscriptions</span>
+                                        </a>
+                                        <a href="shop.html"
+                                            class="dropdown-item px-4 py-3 text-gray-700 flex items-center space-x-3 hover:bg-gray-50 hover:text-blue-600 rounded-lg transition ease-in-out duration-200">
+                                            <i class="fas fa-laptop-code text-lg text-gray-500"></i>
+                                            <span>Programming</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Profile Links -->
+                                <div class="border-t border-gray-100">
+                                    <a href="login.html"
+                                        class="block px-6 py-3 text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-200"
+                                        role="menuitem">
+                                        Sign In
+                                    </a>
+                                    <a href="account-settings.html"
+                                        class="block px-6 py-3 text-gray-700 hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-200"
+                                        role="menuitem">
+                                        Account Settings
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <script type="module" src="js/header.js"></script>
+</body>
+
+</html>

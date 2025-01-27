@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cart.css">
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <nav id="navbar-placeholder"></nav>
+    <nav id="header-placeholder"></nav>
+    
+    <div class="container mt-5 mb-5">
+        <h2 class="text-center mb-4">Shopping Cart</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Cart Items -->
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <div class="row cart-item align-items-center mb-4">
+                            <div class="col-md-3 text-center">
+                                <img src="img/product-5.jpg" alt="Product 1" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-5">
+                                <h5 class="card-title">Spiderman Remastered</h5>
+                                <p class="text-muted">Steam offline</p>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
+                                    <input type="text" class="form-control form-control-sm text-center quantity-input" value="1">
+                                    <button class="btn btn-outline-secondary btn-sm" type="button">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <p class="fw-bold">JD 2.99</p>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row cart-item align-items-center">
+                            <div class="col-md-3 text-center">
+                                <img src="img/product.jpg" alt="Product 2" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-5">
+                                <h5 class="card-title">Red Dead Redemption 2</h5>
+                                <p class="text-muted">Steam Online</p>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
+                                    <input type="text" class="form-control form-control-sm text-center quantity-input" value="2">
+                                    <button class="btn btn-outline-secondary btn-sm" type="button">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <p class="fw-bold">JD 12.00</p>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Continue Shopping Button -->
+                <div class="text-start mb-4">
+                    <a href="#" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left me-2"></i>Continue Shopping
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="col-lg-4">
+                <div class="card cart-summary shadow-sm">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Summary</h5>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Subtotal:</span>
+                            <span>JD 14.99</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Tax (3%):</span>
+                            <span>JD 0.45</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold">
+                            <span>Total:</span>
+                            <span>JD 15.44</span>
+                        </div>
+                        <div class="text-end mt-4">
+                            <a href="checkout.html" class="btn btn-warning w-100">
+                                <i class="bi bi-arrow-right me-2"></i>Payment Checkout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer-placeholder"></footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"defer></script>
+    <script src="js/header.js"></script>
+
+</body>
+
+</html>

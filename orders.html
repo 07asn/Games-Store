@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/orders.css">
+    <title>07asn | Orders</title>
+</head>
+<body>
+    <nav id="navbar-placeholder"></nav>
+    <nav id="header-placeholder"></nav>
+
+    <div class="container-xl px-4 mt-4">
+        <h1 class="title">Orders History</h1>
+        <hr class="mt-0 mb-4">
+        <!-- Billing history card-->
+        <div class="card mb-4">
+            <div class="card-header">Billing History</div>
+            <div class="card-body p-0">
+                <!-- Billing history table-->
+                <div class="table-responsive table-billing-history">
+                    <table class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th class="border-gray-200" scope="col">Transaction ID</th>
+                                <th class="border-gray-200" scope="col">Date</th>
+                                <th class="border-gray-200" scope="col">Amount</th>
+                                <th class="border-gray-200" scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="clickable-row" data-href="order-details.html">
+                                
+                                    <td>#39201</td>
+                                    <td>Jan 01/25 - 2:43 PM</td>
+                                    <td>29.99JD</td>
+                                    <td><span class="badge bg-light text-dark">Pending</span></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="order-details.html">
+                                <td>#38594</td>
+                                <td>Dec 30/24 - 7:35 PM</td>
+                                <td>29.99JD</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="order-details.html">
+                                <td>#38223</td>
+                                <td>Oct 18/24 - 0:43 AM</td>
+                                <td>29.99JD</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                            <tr class="clickable-row" data-href="order-details.html">
+                                <td>#38125</td>
+                                <td>May 11/24 - 5:43 PM</td>
+                                <td>29.99JD</td>
+                                <td><span class="badge bg-success">Completed</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <script>
+        document.querySelectorAll('.clickable-row').forEach(row => {
+            row.addEventListener('click', () => {
+                window.location.href = row.dataset.href;
+            });
+        });
+    </script>
+    <footer id="footer-placeholder"></footer>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"defer></script>
+    <script src="js/header.js"></script>
+
+</body>
+</html>

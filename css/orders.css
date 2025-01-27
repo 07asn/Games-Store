@@ -1,0 +1,63 @@
+body {
+    margin-top: 20px;
+    background-color: #F6F6F6;
+    color: #69707a;
+}
+#header-placeholder {
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+#navbar-placeholder{
+    z-index: 1001;
+}
+
+.img-account-profile {
+    height: 10rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+
+.card .card-header {
+    font-weight: 500;
+}
+
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+
+.table tbody tr {
+    padding: 20px 0; 
+}
+
+.table tbody td {
+    padding: 15px 20px;
+}
+
+.clickable-row:hover {
+    height: 60px; /* Increased height on hover */
+    box-shadow: 0 8px 15px rgba(0.2, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/shop.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar-placeholder"></nav>
+    <nav id="header-placeholder"></nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <!-- Filter and Search Wrapper -->
+                <div class="d-flex flex-wrap align-items-center gap-3 ">
+                    <!-- Filter dropdown for sorting -->
+                    <div>
+                        <select class="form-select" id="sort-filter" aria-label="Sort products"
+                            style="min-width: 180px;">
+                            <option value="default" selected>Sort by</option>
+                            <option value="low-price">Low Price</option>
+                            <option value="high-price">High Price</option>
+                            <option value="newest">Newest</option>
+                            <option value="popular">Popular</option>
+                        </select>
+                    </div>
+
+                    <!-- Filter dropdown for categories -->
+                    <div>
+                        <select class="form-select" id="category-filter" aria-label="Category"
+                            style="min-width: 180px;">
+                            <option value="default" selected>Category</option>
+                            <option value="all">All</option>
+                            <option value="steam-online">Steam Online</option>
+                            <option value="steam-offline">Steam Offline</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section">
+
+        <div class="container">
+            <div class="row justify-content-center section-heading">
+                <div class="col-lg-6 text-center">
+                    <h3 class="h2 mt-2 mb-4">Games</h3>
+                </div>
+            </div>
+            <div class="row g-3 g-lg-4">
+                <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 10%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="product.html"><img class="img-fluid" src="img/product-3.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="product.html" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Full Rim Aviator Eyeglasses</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 2.<small>60</small></span>
+                                <del class="fs-sm text-muted">JD 3.<small>00</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 75%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-4.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">FC 25 Standard Edition</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 14.<small>99</small></span>
+                                <del class="fs-sm text-muted">JD 59.<small>50</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 45%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-5.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Spiderman Remastered</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 2.<small>99</small></span>
+                                <del class="fs-sm text-muted">JD 4.<small>99</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 15%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-2.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Cyberpunk 2077</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 3.<small>50</small></span>
+                                <del class="fs-sm text-muted">JD 4.<small>99</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 20%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-2.png.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Elden Ring + Shadow DLC</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 4.<small>50</small></span>
+                                <del class="fs-sm text-muted">JD 5.<small>50</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 10%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-3.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Full Rim Aviator Eyeglasses</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 2.<small>60</small></span>
+                                <del class="fs-sm text-muted">JD 3.<small>00</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 75%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-4.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">FC 25 Standard Edition</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 14.<small>99</small></span>
+                                <del class="fs-sm text-muted">JD 59.<small>50</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 45%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-5.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Spiderman Remastered</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 2.<small>99</small></span>
+                                <del class="fs-sm text-muted">JD 4.<small>99</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 15%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-2.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Cyberpunk 2077</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 3.<small>50</small></span>
+                                <del class="fs-sm text-muted">JD 4.<small>99</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 20%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-2.png.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Elden Ring + Shadow DLC</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 4.<small>50</small></span>
+                                <del class="fs-sm text-muted">JD 5.<small>50</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 10%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-3.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Full Rim Aviator Eyeglasses</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 2.<small>60</small></span>
+                                <del class="fs-sm text-muted">JD 3.<small>00</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 75%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-4.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">FC 25 Standard Edition</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 14.<small>99</small></span>
+                                <del class="fs-sm text-muted">JD 59.<small>50</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 45%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-5.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Spiderman Remastered</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 2.<small>99</small></span>
+                                <del class="fs-sm text-muted">JD 4.<small>99</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 15%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-2.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Cyberpunk 2077</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 3.<small>50</small></span>
+                                <del class="fs-sm text-muted">JD 4.<small>99</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+                 <!-- Product Box -->
+                <div class="col-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-card-image">
+                            <div class="badge-ribbon"><span class="badge bg-danger">Sale 20%</span></div>
+                            <div class="product-media position-relative">
+                                <a href="#"><img class="img-fluid" src="img/product-2.png.jpg" title="" alt=""></a>
+                                <!-- Favorite button -->
+                                <a href="#" class="btn btn-favorite position-absolute top-0 end-0 m-2"
+                                    title="Add to Favorites">
+                                    <i class="fa fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="product-card-info">
+                            <h6 class="product-title">
+                                <a href="#">Elden Ring + Shadow DLC</a>
+                            </h6>
+                            <div class="product-price">
+                                <span class="text-primary">JD 4.<small>50</small></span>
+                                <del class="fs-sm text-muted">JD 5.<small>50</small></del>
+                            </div>
+                            <div class="product-action">
+                                <!-- Add to Cart button -->
+                                <a href="#" class="btn btn-add-to-cart" title="Add to Cart">
+                                    <i class="fa fa-shopping-cart"></i>  Add to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product Box -->
+            </div>
+        </div>
+    </section>
+    <footer id="footer-placeholder"></footer>
+    <script src="js/index.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"defer></script>
+    <script src="js/header.js"></script>
+
+    <script src="js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

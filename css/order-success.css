@@ -1,0 +1,102 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-height: 65vh;
+}
+
+.order-confirmation .first-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.order-confirmation .first-container img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.order-confirmation h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.order-confirmation p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 8px 0;
+}
+
+.order-confirmation p span {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.order-confirmation .status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #00903c;
+    margin-top: 20px;
+}
+
+.order-confirmation .status img {
+    width: 18px;
+}
+
+.order-confirmation .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.order-confirmation .btn-container button {
+    width: 250px;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: #DFBF00;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.order-confirmation .btn-container button:hover {
+    background-color: #6c757d;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .order-confirmation h1 {
+        font-size: 1.6rem;
+    }
+
+    .order-confirmation .btn-container button {
+        width: 100%;
+        padding: 14px;
+    }
+}
