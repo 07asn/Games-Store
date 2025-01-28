@@ -18,19 +18,23 @@
     <div class="container-xl px-4 mt-4">
         <div class="row">
             <div class="col-xl-4">
-                <!-- Profile picture card-->
-                <div class="card text-center mb-4">
-                    <div class="card-header">Profile Picture</div>
+                <!-- Profile picture card -->
+                <div class="card text-center mb-4 shadow-sm">
+                    <div class="card-header bg-warning text-white">Profile Picture</div>
                     <div class="card-body">
-                        <img id="profile-picture" class="img-account-profile rounded-circle mb-3" src="..\img\male.png"
-                            alt="Profile Picture">
-                        <div class="text-muted mb-3">Select your gender</div>
-                        <select id="gender-select" class="form-control">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
+                        <!-- Profile picture container -->
+                        <div class="d-flex flex-column align-items-center">
+                            <img id="profile-picture" class="img-account-profile rounded-circle mb-3 shadow"
+                                src="../img/male.png" alt="Profile Picture">
+                            <div class="text-muted mb-3">Select your gender</div>
+                            <select id="gender-select" class="form-control w-50">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div class="col-xl-8">
                 <!-- Account details card-->
@@ -85,8 +89,8 @@
                                 <div class="input-group">
                                     <input class="form-control" id="inputPassword" type="password"
                                         placeholder="**********">
-                                    <button class="btn btn-outline-secondary" type="button"
-                                        id="changePasswordButton" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                                    <button class="btn btn-outline-secondary" type="button" id="changePasswordButton"
+                                        data-bs-toggle="modal" data-bs-target="#changePasswordModal">
                                         Change Password
                                     </button>
                                 </div>
@@ -105,7 +109,8 @@
     <footer id="footer-placeholder"></footer>
 
     <!-- Modal for Change Password -->
-    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -117,17 +122,20 @@
                         <!-- Form Group (current password)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="currentPassword">Current Password</label>
-                            <input class="form-control" id="currentPassword" type="password" placeholder="Enter current password">
+                            <input class="form-control" id="currentPassword" type="password"
+                                placeholder="Enter current password">
                         </div>
                         <!-- Form Group (new password)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="newPassword">New Password</label>
-                            <input class="form-control" id="newPassword" type="password" placeholder="Enter new password">
+                            <input class="form-control" id="newPassword" type="password"
+                                placeholder="Enter new password">
                         </div>
                         <!-- Form Group (confirm password)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="confirmPassword">Confirm Password</label>
-                            <input class="form-control" id="confirmPassword" type="password" placeholder="Confirm new password">
+                            <input class="form-control" id="confirmPassword" type="password"
+                                placeholder="Confirm new password">
                         </div>
                         <button class="btn btn-primary" type="button">Save</button>
                     </form>
@@ -139,7 +147,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="js/header.js"></script>
 
 </body>

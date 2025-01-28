@@ -17,7 +17,10 @@ body {
 }
 
 .img-account-profile {
-    height: 10rem;
+    height: 10rem; /* Adjust the size */
+    width: 10rem; /* Ensure it's circular */
+    object-fit: cover; /* Keep the image proportions */
+    border: 3px solid #ddd; 
 }
 
 .rounded-circle {
