@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const placeholder = document.getElementById('navbar-placeholder');
+console.log(placeholder);  // Should log the element or `null`
     fetch("../navbar.html")
         .then(response => {
             if (!response.ok) {
