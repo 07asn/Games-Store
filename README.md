@@ -17,7 +17,7 @@ Explore the live website and experience the Games Store in action:
 
 ## 🎨 Figma Wireframe and Mockup  
 Discover the wireframes and mockups for the Games Store's user-centric design on Figma:  
-👉 [Access the Figma Wireframe & Mockup](https://www.figma.com/design/0Vte1WD6VevE7GiRNKWbHO/GamesStore?m=auto&t=XQOvA1jo5vaK7hSK-1)
+👉 [Access the Figma Wireframe & Mockup](https://www.figma.com/design/al8FFI2026I6XLYuPi4nyc/Digital-Games-Store?m=auto&t=2DynVAviamZKNyXq-6)
 
 ---
 
