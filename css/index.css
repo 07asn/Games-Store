@@ -1253,10 +1253,7 @@ img {
     .testimonial-card {
         text-align: center;
     }
-    
-    .d-flex.align-items-center {
-        flex-direction: column;
-    }
+
     
     .ms-4 {
         margin-left: 0 !important;
